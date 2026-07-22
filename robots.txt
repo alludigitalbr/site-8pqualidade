@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /landing.html
+
+Sitemap: https://8pgestao.com.br/sitemap.xml
