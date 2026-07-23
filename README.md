@@ -40,7 +40,6 @@ site/
 
 - WhatsApp: +55 11 99473-3883 (botão flutuante + CTAs + fallback do formulário)
 - Instagram: @8pqualidade
-- LinkedIn: linkedin.com/in/marcelo-alberico
 
 ## Teste A/B da landing
 
