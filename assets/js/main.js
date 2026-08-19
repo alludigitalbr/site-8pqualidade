@@ -92,6 +92,25 @@
     sections.forEach(function (s) { sio.observe(s); });
   }
 
+  // ---------- Máscara de telefone ----------
+  const telefoneInput = document.getElementById('f-telefone');
+  if (telefoneInput) {
+    telefoneInput.addEventListener('input', function () {
+      const digits = telefoneInput.value.replace(/\D/g, '').slice(0, 11);
+      let masked = digits;
+      if (digits.length > 10) {
+        masked = digits.replace(/(\d{2})(\d{5})(\d{0,4})/, '($1) $2-$3');
+      } else if (digits.length > 6) {
+        masked = digits.replace(/(\d{2})(\d{4})(\d{0,4})/, '($1) $2-$3');
+      } else if (digits.length > 2) {
+        masked = digits.replace(/(\d{2})(\d{0,4})/, '($1) $2');
+      } else if (digits.length > 0) {
+        masked = digits.replace(/(\d{0,2})/, '($1');
+      }
+      telefoneInput.value = masked.replace(/-$/, '');
+    });
+  }
+
   // ---------- Formulário ----------
   // Envia direto para o WhatsApp da 8P com os dados preenchidos.
   const form = document.getElementById('visitForm');
