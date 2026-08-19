@@ -18,9 +18,9 @@ site/
 
 ## Antes de publicar — checklist
 
-1. **E-mail do formulário**: ✅ já configurado — leads vão para `8pgestaoenegocios@gmail.com` via FormSubmit.
-   No primeiro envio real (com o site publicado), o FormSubmit manda um e-mail de confirmação
-   para essa caixa — basta clicar em "Activate" uma única vez.
+1. **Formulário de leads**: ✅ já configurado — ao enviar, abre o WhatsApp (+55 11 99473-3883)
+   em nova aba com os dados preenchidos, pronto para o lead só apertar "enviar". Sem backend,
+   sem e-mail, sem serviço externo. Lógica em `assets/js/main.js`.
 
 2. **Google Analytics (GA4)**: descomente o bloco no `<head>` de `index.html` e troque `G-XXXXXXXXXX` pelo ID real.
 

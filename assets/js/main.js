@@ -93,6 +93,7 @@
   }
 
   // ---------- Formulário ----------
+  // Envia direto para o WhatsApp da 8P com os dados preenchidos.
   const form = document.getElementById('visitForm');
   if (form) {
     form.addEventListener('submit', function (e) {
@@ -102,50 +103,27 @@
       success.classList.remove('show');
       error.classList.remove('show');
 
-      const action = form.getAttribute('action') || '';
-      if (action.indexOf('SEU_EMAIL_AQUI') !== -1) {
-        // Endpoint ainda não configurado — abre o WhatsApp como fallback
-        const data = new FormData(form);
-        let msg = 'Olá! Gostaria de solicitar uma visita da 8P.%0A';
-        msg += '*Nome:* ' + encodeURIComponent(data.get('nome') || '') + '%0A';
-        msg += '*Empresa:* ' + encodeURIComponent(data.get('empresa') || '') + '%0A';
-        msg += '*Cargo:* ' + encodeURIComponent(data.get('cargo') || '') + '%0A';
-        msg += '*Telefone:* ' + encodeURIComponent(data.get('telefone') || '') + '%0A';
-        msg += '*E-mail:* ' + encodeURIComponent(data.get('email') || '') + '%0A';
-        msg += '*Segmento:* ' + encodeURIComponent(data.get('segmento') || '') + '%0A';
-        msg += '*Necessidade:* ' + encodeURIComponent(data.get('necessidade') || '') + '%0A';
-        msg += '*Mensagem:* ' + encodeURIComponent(data.get('mensagem') || '');
-        window.open('https://wa.me/5511994733883?text=' + msg, '_blank');
-        success.classList.add('show');
-        form.reset();
-        // Meta Pixel: fbq('track', 'Lead');
-        // GA4: gtag('event', 'generate_lead');
+      const data = new FormData(form);
+      let msg = 'Olá! Gostaria de solicitar uma visita da 8P.%0A';
+      msg += '*Nome:* ' + encodeURIComponent(data.get('nome') || '') + '%0A';
+      msg += '*Empresa:* ' + encodeURIComponent(data.get('empresa') || '') + '%0A';
+      msg += '*Cargo:* ' + encodeURIComponent(data.get('cargo') || '') + '%0A';
+      msg += '*Telefone:* ' + encodeURIComponent(data.get('telefone') || '') + '%0A';
+      msg += '*E-mail:* ' + encodeURIComponent(data.get('email') || '') + '%0A';
+      msg += '*Segmento:* ' + encodeURIComponent(data.get('segmento') || '') + '%0A';
+      msg += '*Necessidade:* ' + encodeURIComponent(data.get('necessidade') || '') + '%0A';
+      msg += '*Mensagem:* ' + encodeURIComponent(data.get('mensagem') || '');
+      const win = window.open('https://wa.me/5511994733883?text=' + msg, '_blank');
+      if (!win) {
+        error.classList.add('show');
+        error.scrollIntoView({ behavior: 'smooth', block: 'center' });
         return;
       }
-
-      const btn = form.querySelector('button[type="submit"]');
-      btn.disabled = true;
-      btn.textContent = 'Enviando...';
-      fetch(action, {
-        method: 'POST',
-        body: new FormData(form),
-        headers: { 'Accept': 'application/json' }
-      }).then(function (res) {
-        if (res.ok) {
-          success.classList.add('show');
-          form.reset();
-          // Meta Pixel: fbq('track', 'Lead');
-          // GA4: gtag('event', 'generate_lead');
-        } else {
-          error.classList.add('show');
-        }
-      }).catch(function () {
-        error.classList.add('show');
-      }).finally(function () {
-        btn.disabled = false;
-        btn.textContent = 'Enviar solicitação';
-        success.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      });
+      success.classList.add('show');
+      form.reset();
+      success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      // Meta Pixel: fbq('track', 'Lead');
+      // GA4: gtag('event', 'generate_lead');
     });
   }
 

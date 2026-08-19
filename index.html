@@ -362,19 +362,10 @@
         </div>
 
         <div class="form-card reveal">
-          <div class="form-success" role="status">Recebemos sua solicitação! Nossa equipe entrará em contato em breve.</div>
-          <div class="form-error" role="alert">Não foi possível enviar agora. Tente novamente ou fale conosco pelo WhatsApp.</div>
-          <!-- ============================================
-               FORMULÁRIO DE LEADS — FormSubmit (grátis, sem backend)
-               Leads enviados para: 8pgestaoenegocios@gmail.com
-               No primeiro envio real, o FormSubmit manda um e-mail de
-               confirmação para essa caixa — clicar em "Activate".
-               Alternativas: Formspree, EmailJS ou endpoint próprio/CRM.
-               ============================================ -->
-          <form id="visitForm" action="https://formsubmit.co/8pgestaoenegocios@gmail.com" method="POST">
-            <input type="hidden" name="_subject" value="Novo lead — Site 8P Gestão & Negócios">
-            <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_next" value="">
+          <div class="form-success" role="status">Abrimos o WhatsApp com sua solicitação preenchida — é só enviar a mensagem por lá.</div>
+          <div class="form-error" role="alert">Seu navegador bloqueou a abertura do WhatsApp. Tente novamente ou use o botão de WhatsApp flutuante.</div>
+          <!-- Formulário envia direto para o WhatsApp da 8P (assets/js/main.js) -->
+          <form id="visitForm">
             <div class="form-row">
               <div class="field">
                 <label for="f-nome">Nome*</label>
