@@ -96,7 +96,6 @@ p{ margin:0 0 1em; color: var(--gray); }
   text-transform: uppercase;
 }
 .nav a:hover, .nav a.active{ color: var(--gold); background: rgba(185,169,100,.08); }
-.nav-cta{ margin-left: 8px; }
 .nav-toggle{ display:none; background:none; border:none; color: var(--white); font-size:1.6rem; cursor:pointer; }
 
 @media (max-width: 980px){
@@ -110,8 +109,6 @@ p{ margin:0 0 1em; color: var(--gray); }
   }
   .nav.open{ transform: translateX(0); }
   .nav a{ padding: 14px 10px; border-bottom: 1px solid rgba(255,255,255,.06); border-radius:0; }
-  .nav-cta{ margin-left:0; margin-top: 14px; }
-  .nav-cta .btn{ width:100%; }
 }
 
 .nav-scrim{ position: fixed; inset:0; background: rgba(0,0,0,.6); opacity:0; pointer-events:none; transition: opacity .3s ease; z-index: 999; }
