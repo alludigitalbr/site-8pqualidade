@@ -1,12 +1,14 @@
 ---
-title: "Como estruturar um SGQ eficiente e gerar resultados"
-category: "ISO 9001"
+title: Como estruturar um SGQ eficiente e gerar resultados
+date: 2026-08-26T10:32:00.000-03:00
+category: ISO 9001
 featured: true
-excerpt: "Um Sistema de Gestão da Qualidade só entrega resultado quando sai do papel. Veja os passos práticos para estruturar o seu."
+excerpt: Um Sistema de Gestão da Qualidade só entrega resultado quando sai do
+  papel. Veja os passos práticos para estruturar o seu.
 ---
 Um Sistema de Gestão da Qualidade (SGQ) bem estruturado não é sobre acumular documentos — é sobre criar rotinas que a equipe realmente segue no dia a dia.
 
-## 1. Diagnóstico antes de qualquer coisa
+## 1. Diagnóstico antes de qualquer coisa (teste)
 
 Antes de escrever um procedimento, entenda como o trabalho já é feito hoje. A maior parte das não conformidades em auditoria vem de processos documentados que não refletem a prática real.
 
