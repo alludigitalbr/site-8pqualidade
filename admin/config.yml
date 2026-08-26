@@ -1,0 +1,65 @@
+# ============================================================
+# EDITOR DE CONTEÚDO (Decap CMS) — 8P Gestão & Negócios
+#
+# PENDENTE: o bloco "backend" abaixo precisa ser substituído
+# pelo template gerado no painel da DecapBridge (decapbridge.com):
+#   1. Criar conta em decapbridge.com
+#   2. Adicionar este site: repositório "alludigitalbr/site-8pqualidade",
+#      branch "main", URL do admin "https://8pqualidade.com.br/admin/index.html"
+#   3. Copiar o bloco "backend:" gerado por eles e colar aqui no lugar do
+#      bloco de exemplo abaixo
+#   4. Convidar o Tauã como colaborador (aba "Manage collaborators")
+# ============================================================
+backend:
+  name: github
+  repo: alludigitalbr/site-8pqualidade
+  branch: main
+  base_url: https://SUBSTITUIR-PELO-TEMPLATE-DECAPBRIDGE
+
+site_url: https://8pqualidade.com.br
+display_url: https://8pqualidade.com.br
+logo_url: /assets/img/logo-8p.png
+
+media_folder: "assets/img/noticias"
+public_folder: "/assets/img/noticias"
+
+collections:
+  - name: "posts"
+    label: "Notícias"
+    label_singular: "Notícia"
+    folder: "_posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    summary: "{{title}} — {{category}}"
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Data", name: "date", widget: "datetime" }
+      - label: "Categoria"
+        name: "category"
+        widget: "select"
+        options:
+          - "ISO 9001"
+          - "IATF 16949"
+          - "ISO 14001"
+          - "ISO 45001"
+          - "Ferramentas da Qualidade"
+          - "Lean Manufacturing"
+          - "Treinamentos"
+          - "Auditorias"
+      - { label: "Destaque na página de Notícias", name: "featured", widget: "boolean", default: false }
+      - { label: "Resumo (aparece nos cards)", name: "excerpt", widget: "text" }
+      - { label: "Imagem de capa", name: "image", widget: "image", required: false }
+      - { label: "Conteúdo", name: "body", widget: "markdown" }
+
+  - name: "guias"
+    label: "Guias e Materiais"
+    label_singular: "Guia"
+    folder: "_guias"
+    create: true
+    slug: "{{slug}}"
+    summary: "{{title}}"
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Descrição (aparece no card)", name: "description", widget: "text" }
+      - { label: "Arquivo PDF", name: "file", widget: "file", media_folder: "assets/guias", public_folder: "/assets/guias" }
+      - { label: "Texto da página do guia", name: "body", widget: "markdown", required: false }

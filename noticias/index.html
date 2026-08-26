@@ -1,0 +1,129 @@
+---
+layout: default
+title: Notícias
+description: Notícias, artigos e boas práticas sobre gestão da qualidade, ISO 9001, IATF 16949, Lean Manufacturing e desenvolvimento organizacional.
+permalink: /noticias/
+---
+<section class="news-hero">
+  <div class="container">
+    <div class="hero-kicker">Gestão · Qualidade · Resultados</div>
+    <h1>Informação que gera <em>qualidade</em>. Gestão que gera <em>resultados</em>.</h1>
+    <p class="lead">Atualizações, tendências, ferramentas e boas práticas para impulsionar a excelência da sua organização.</p>
+    <div class="news-search">
+      <input type="text" id="newsSearch" placeholder="Buscar notícias, normas, ferramentas e mais...">
+    </div>
+  </div>
+</section>
+
+<section class="section" id="categorias">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Navegue por categorias</span>
+      <h2 class="section-title">Todas as <span class="thin">categorias</span></h2>
+    </div>
+    <div class="news-categories" id="newsCategories">
+      <button class="news-cat active" data-cat="todas">Todas</button>
+      <button class="news-cat" data-cat="ISO 9001">ISO 9001</button>
+      <button class="news-cat" data-cat="IATF 16949">IATF 16949</button>
+      <button class="news-cat" data-cat="ISO 14001">Meio Ambiente · ISO 14001</button>
+      <button class="news-cat" data-cat="ISO 45001">Saúde e Segurança · ISO 45001</button>
+      <button class="news-cat" data-cat="Ferramentas da Qualidade">Ferramentas da Qualidade</button>
+      <button class="news-cat" data-cat="Lean Manufacturing">Lean Manufacturing</button>
+      <button class="news-cat" data-cat="Treinamentos">Treinamentos e Desenvolvimento</button>
+      <button class="news-cat" data-cat="Auditorias">Auditorias e Certificações</button>
+    </div>
+  </div>
+</section>
+
+{% assign destaques = site.posts | where: "featured", true | limit: 3 %}
+{% if destaques.size > 0 %}
+<section class="section section-alt" id="destaques">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Em destaque</span>
+      <h2 class="section-title">Últimos <span class="thin">destaques</span></h2>
+    </div>
+    <div class="news-featured-grid">
+      {% for post in destaques %}
+      <a class="news-card news-card-featured reveal" href="{{ post.url | relative_url }}"
+         data-cat="{{ post.category }}"
+         data-search="{{ post.title | append: ' ' | append: post.excerpt | strip_html | downcase }}">
+        {% if post.image %}<div class="news-card-img"><img src="{{ post.image | relative_url }}" alt="{{ post.title }}" loading="lazy"></div>{% endif %}
+        <span class="news-card-cat">{{ post.category }}</span>
+        <h3>{{ post.title }}</h3>
+        <p>{{ post.excerpt | default: post.content | strip_html | truncate: 130 }}</p>
+        <span class="news-card-link">Leia mais →</span>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<section class="section" id="ultimas">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Fique por dentro</span>
+      <h2 class="section-title">Últimas <span class="thin">notícias</span></h2>
+    </div>
+    <div class="news-grid" id="newsGrid">
+      {% for post in site.posts %}
+      <a class="news-card reveal" href="{{ post.url | relative_url }}"
+         data-cat="{{ post.category }}"
+         data-search="{{ post.title | append: ' ' | append: post.excerpt | strip_html | downcase }}">
+        {% if post.image %}<div class="news-card-img"><img src="{{ post.image | relative_url }}" alt="{{ post.title }}" loading="lazy"></div>{% endif %}
+        <span class="news-card-cat">{{ post.category }}</span>
+        <h3>{{ post.title }}</h3>
+        <p>{{ post.excerpt | default: post.content | strip_html | truncate: 110 }}</p>
+        <span class="news-card-date">{{ post.date | date: "%d/%m/%Y" }}</span>
+      </a>
+      {% endfor %}
+    </div>
+    <p class="news-empty" id="newsEmpty" style="display:none;">Nenhuma notícia encontrada com esse filtro.</p>
+  </div>
+</section>
+
+{% if site.guias.size > 0 %}
+<section class="section section-alt" id="guias">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Materiais gratuitos</span>
+      <h2 class="section-title">Guias e <span class="thin">materiais</span></h2>
+      <p class="section-lead">Acesse guias e materiais exclusivos sobre gestão da qualidade e certificações ISO.</p>
+    </div>
+    <div class="news-guides-grid">
+      {% for guia in site.guias %}
+      <div class="news-guide-card reveal">
+        <h4>{{ guia.title }}</h4>
+        <p>{{ guia.description }}</p>
+        <a class="btn btn-outline" href="{{ guia.file | relative_url }}" download>Baixar PDF</a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<section class="section" id="newsletter">
+  <div class="container">
+    <div class="form-card news-newsletter reveal">
+      <div class="form-success" role="status">Inscrição confirmada! Você vai receber nossas próximas novidades.</div>
+      <div class="form-error" role="alert">Não foi possível concluir a inscrição agora. Tente novamente em instantes.</div>
+      <div class="news-newsletter-head">
+        <h2 class="section-title" style="margin-bottom:8px;">Receba nossa <span class="thin">newsletter</span></h2>
+        <p>Conteúdo selecionado sobre gestão da qualidade direto no seu e-mail. 100% gratuito.</p>
+      </div>
+      <!-- ============================================
+           NEWSLETTER — Brevo
+           Troque o "action" abaixo pela URL do formulário
+           gerado no painel da Brevo (Campanhas > Formulários).
+           ============================================ -->
+      <form id="newsletterForm" class="news-newsletter-form" action="#BREVO_FORM_URL_AQUI">
+        <input type="email" name="email" required placeholder="Seu melhor e-mail">
+        <button type="submit" class="btn btn-primary">Inscrever-se</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<script src="{{ '/assets/js/noticias.js' | relative_url }}"></script>

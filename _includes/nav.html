@@ -1,0 +1,19 @@
+<header class="header" id="topo">
+  <div class="container">
+    <a href="/" class="brand" aria-label="8P Gestão e Negócios — início">
+      <img src="{{ '/assets/img/logo-8p.png' | relative_url }}" alt="Logo 8P Gestão & Negócios">
+    </a>
+    <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
+    <nav class="nav" aria-label="Menu principal">
+      <a href="/#sobre">Sobre a 8P</a>
+      <a href="/#solucoes">Nossas Soluções</a>
+      <a href="/#time">Time de Profissionais</a>
+      <a href="/#clientes">Cases de Sucesso</a>
+      <a href="/#cases">Resultados</a>
+      <a href="/noticias/" {% if page.url contains '/noticias/' %}class="active"{% endif %}>Notícias</a>
+      <a href="/#visita">Solicite uma Visita</a>
+      <a href="/#canais">Nossos Canais</a>
+    </nav>
+  </div>
+</header>
+<div class="nav-scrim"></div>

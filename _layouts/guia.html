@@ -1,0 +1,14 @@
+---
+layout: default
+---
+<article class="section post-single">
+  <div class="container post-single-inner">
+    <a href="/noticias/" class="post-back"><i>←</i> Voltar para Notícias</a>
+    <span class="post-category">Guia e Material</span>
+    <h1 class="post-title">{{ page.title }}</h1>
+    <div class="post-body">
+      {{ content }}
+    </div>
+    <a class="btn btn-primary" href="{{ page.file | relative_url }}" download>Baixar PDF</a>
+  </div>
+</article>

@@ -1,0 +1,31 @@
+title: 8P Gestão & Negócios
+description: Notícias, guias e materiais sobre gestão da qualidade, ISO 9001, IATF 16949 e melhoria contínua.
+url: "https://8pqualidade.com.br"
+baseurl: ""
+
+markdown: kramdown
+permalink: /noticias/:slug/
+
+collections:
+  guias:
+    output: true
+    permalink: /guias/:slug/
+
+defaults:
+  - scope:
+      type: posts
+    values:
+      layout: post
+  - scope:
+      type: guias
+    values:
+      layout: guia
+
+exclude:
+  - README.md
+  - node_modules
+  - package.json
+  - package-lock.json
+
+plugins:
+  - jekyll-feed
