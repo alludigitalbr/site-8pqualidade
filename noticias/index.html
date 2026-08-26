@@ -107,19 +107,21 @@ permalink: /noticias/
 <section class="section" id="newsletter">
   <div class="container">
     <div class="form-card news-newsletter reveal">
-      <div class="form-success" role="status">Inscrição confirmada! Você vai receber nossas próximas novidades.</div>
+      <div class="form-success" role="status">Quase lá! Enviamos um e-mail de confirmação — clique no link para ativar sua inscrição.</div>
       <div class="form-error" role="alert">Não foi possível concluir a inscrição agora. Tente novamente em instantes.</div>
       <div class="news-newsletter-head">
         <h2 class="section-title" style="margin-bottom:8px;">Receba nossa <span class="thin">newsletter</span></h2>
         <p>Conteúdo selecionado sobre gestão da qualidade direto no seu e-mail. 100% gratuito.</p>
       </div>
-      <!-- ============================================
-           NEWSLETTER — Brevo
-           Troque o "action" abaixo pela URL do formulário
-           gerado no painel da Brevo (Campanhas > Formulários).
-           ============================================ -->
-      <form id="newsletterForm" class="news-newsletter-form" action="#BREVO_FORM_URL_AQUI">
-        <input type="email" name="email" required placeholder="Seu melhor e-mail">
+      <!-- Newsletter via Brevo (double opt-in). Envio por fetch/no-cors
+           para manter o visual do site — ver assets/js/noticias.js -->
+      <form id="newsletterForm" class="news-newsletter-form"
+            action="https://e318c383.sibforms.com/serve/MUIFAAqI9YfGTk8xKqERrQyZp1DNX-YLXjnH03XoXZufWF1voVjj6Siuf-lN_Z2X_8QoldqqQu5pMMrohw4SPWDtM53A8jb7EEcEWSUMXPmOnE0ocaLhsMM-zfKNbfPDUeS6Dwu8MBMrBC2ocg4NwePAgzyxfa2Aq0stGk8quGcNQyy6ngzW8QWWTl29NQijFFG_Jsw3tiOCYMvayA=="
+            method="POST">
+        <input type="email" name="EMAIL" required placeholder="Seu melhor e-mail">
+        <input type="text" name="email_address_check" value="" class="news-honeypot" tabindex="-1" autocomplete="off">
+        <input type="hidden" name="locale" value="pt">
+        <input type="hidden" name="html_type" value="simple">
         <button type="submit" class="btn btn-primary">Inscrever-se</button>
       </form>
     </div>

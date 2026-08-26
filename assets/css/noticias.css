@@ -57,6 +57,7 @@
   background:#0a0a0a; border:1px solid var(--card-border); color: var(--white);
 }
 .news-newsletter-form input[type="email"]:focus{ outline:none; border-color: var(--gold); }
+.news-honeypot{ position:absolute; left:-9999px; width:1px; height:1px; opacity:0; }
 
 .post-single{ padding-top: 150px; }
 .post-single-inner{ max-width: 760px; }

@@ -34,23 +34,33 @@
   });
 
   // ---------- Newsletter (Brevo) ----------
+  // Envio via fetch (no-cors) para manter o visitante no site em vez de
+  // redirecionar para a página de resposta da Brevo. Como "no-cors" não
+  // permite ler a resposta, o sucesso é otimista (o POST chega à Brevo
+  // normalmente; erros de rede ainda caem no catch).
   var form = document.getElementById('newsletterForm');
   if (form) {
     form.addEventListener('submit', function (e) {
-      var action = form.getAttribute('action') || '';
+      e.preventDefault();
+      var action = form.getAttribute('action');
       var success = form.parentElement.querySelector('.form-success');
       var error = form.parentElement.querySelector('.form-error');
-      if (action.indexOf('BREVO_FORM_URL_AQUI') !== -1) {
-        e.preventDefault();
-        if (error) {
-          error.textContent = 'Inscrição ainda não configurada. Fale com a 8P pelo WhatsApp para receber novidades.';
-          error.classList.add('show');
-        }
-        return;
-      }
+      var btn = form.querySelector('button[type="submit"]');
       if (success) success.classList.remove('show');
       if (error) error.classList.remove('show');
-      // Envio segue normalmente para o formulário da Brevo (action já configurado).
+      btn.disabled = true;
+      fetch(action, {
+        method: 'POST',
+        mode: 'no-cors',
+        body: new FormData(form)
+      }).then(function () {
+        if (success) success.classList.add('show');
+        form.reset();
+      }).catch(function () {
+        if (error) error.classList.add('show');
+      }).finally(function () {
+        btn.disabled = false;
+      });
     });
   }
 })();
