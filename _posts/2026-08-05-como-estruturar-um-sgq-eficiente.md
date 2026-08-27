@@ -5,6 +5,7 @@ category: ISO 9001
 featured: true
 excerpt: Um Sistema de Gestão da Qualidade só entrega resultado quando sai do
   papel. Veja os passos práticos para estruturar o seu.
+image: /assets/img/noticias/chatgpt-image-27-de-ago.-de-2026-08_40_17.png
 ---
 Um Sistema de Gestão da Qualidade (SGQ) bem estruturado não é sobre acumular documentos — é sobre criar rotinas que a equipe realmente segue no dia a dia.
 
