@@ -264,7 +264,7 @@ p{ margin:0 0 1em; color: var(--gray); }
 .form-success.show, .form-error.show{ display:block; }
 
 /* ---------- Channels ---------- */
-.channels-grid{ display:grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.channels-grid{ display:grid; grid-template-columns: repeat(5, 1fr); gap: 20px; }
 .channel-card{
   background: var(--card); border:1px solid var(--card-border); border-radius: var(--radius);
   padding: 30px 22px; text-align:center; transition: transform .25s ease, border-color .25s ease;
