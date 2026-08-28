@@ -22,12 +22,12 @@ Para empresas que pretendem iniciar o processo de certificação, essa mudança 
 
 Nesta nova versão, o grande desafio das empresas será demonstrar que o sistema realmente funciona na prática. Mais precisamente, significa que a organização deverá ser capaz de evidenciar alguns pontos:
 
-* Como realiza o acompanhamento dos riscos e oportunidades;
-* Como monitora o desempenho dos processos;
-* Como utiliza os indicadores de maneira estratégica para tomada de decisão;
-* Como trata ações corretivas e oportunidades de melhoria;
-* Como transforma necessidades das partes interessadas em ações;
-* E, não menos importante, quais melhorias e resultados foram efetivamente alcançados.
+1. Como realiza o acompanhamento dos riscos e oportunidades;
+2. Como monitora o desempenho dos processos;
+3. Como utiliza os indicadores de maneira estratégica para tomada de decisão;
+4. Como trata ações corretivas e oportunidades de melhoria;
+5. Como transforma necessidades das partes interessadas em ações;
+6. E, não menos importante, quais melhorias e resultados foram efetivamente alcançados.
 
 ## Preparar-se agora é fundamental
 
