@@ -16,7 +16,7 @@ Um exemplo prático dessa mudança de cenário consiste na forma de avaliar o en
 
 O objetivo dessa mudança é que a qualidade não exista apenas em documentos, quadros de gestão à vista ou procedimentos, mas, sim, estar presente nas decisões, no dia a dia, nos processos e, acima de tudo, nos resultados da organização.
 
-## Documentação continua importante, mas a prática ganha protagonismo
+## **Documentação continua importante, mas a prática ganha protagonismo**
 
 Para empresas que pretendem iniciar o processo de certificação, essa mudança traz uma mensagem importante e significativa: **não basta criar documentos para atender à norma**; **a prática precisa estar alinhada com os procedimentos, registros e informações documentadas**.
 
@@ -29,7 +29,7 @@ Nesta nova versão, o grande desafio das empresas será demonstrar que o sistema
 5. Como transforma necessidades das partes interessadas em ações;
 6. E, não menos importante, quais melhorias e resultados foram efetivamente alcançados.
 
-## Preparar-se agora é fundamental
+## **Preparar-se agora é fundamental**
 
 Empresas que desejam iniciar a jornada rumo à certificação, não precisam esperar a publicação de lançamento da norma para começar esse processo. A 8P Gestão & Negócios acompanha essa constante evolução e auxilia empresas nos 4 pilares da implementação: estabelecer, documentar, implementar e manter. 
 
