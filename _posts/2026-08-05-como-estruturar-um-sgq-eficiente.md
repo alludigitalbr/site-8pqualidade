@@ -8,7 +8,7 @@ excerpt: Um Sistema de Gestão da Qualidade só entrega resultado quando sai do
   papel. Veja os passos práticos para estruturar o seu.
 image: ""
 ---
-A nova versão da ISO 9001:2026, com previsão de lançamento para setembro de2026, reforça uma importante evolução na forma como as empresas deverão enxergar e demonstrar a eficácia do seu Sistema de Gestão da Qualidade. 
+A nova versão da ISO 9001:2026, com previsão de lançamento para setembro de 2026, reforça uma importante evolução na forma como as empresas deverão enxergar e demonstrar a eficácia do seu Sistema de Gestão da Qualidade. 
 
 Além de conhecer procedimentos ou manter documentos organizados, a tendência é que as auditorias estejam cada vez mais alinhadas para aquilo que realmente acontece dentro da organização, ou seja, como os processos funcionam, quais resultados são alcançados e, principalmente, quais melhorias foram implementadas.
 
