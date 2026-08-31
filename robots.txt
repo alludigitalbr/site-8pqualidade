@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
 Disallow: /landing.html
+Disallow: /admin/
 
-Sitemap: https://8pgestao.com.br/sitemap.xml
+Sitemap: https://8pqualidade.com.br/sitemap.xml
