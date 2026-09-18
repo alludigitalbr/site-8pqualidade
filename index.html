@@ -1,3 +1,6 @@
+---
+layout: null
+---
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -28,6 +31,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/noticias.css">
 
   <!-- Google tag (gtag.js) — GA4 + Google Ads -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-EH4SXFGJJ1"></script>
@@ -86,6 +90,7 @@
         <a href="#clientes">Cases de Sucesso</a>
         <a href="#cases">Resultados</a>
         <a href="/noticias/">Notícias</a>
+        <a href="/noticias/">Notícias</a>
         <a href="#visita">Solicite uma Visita</a>
         <a href="#canais">Nossos Canais</a>
       </nav>
@@ -138,6 +143,39 @@
       </aside>
     </div>
   </section>
+
+  <!-- ================= NOTÍCIAS (carrossel) ================= -->
+  {% assign home_posts = site.posts | limit: 6 %}
+  {% if home_posts.size > 0 %}
+  <section class="section section-alt news-home" id="noticias-home">
+    <div class="container">
+      <div class="news-home-head">
+        <div>
+          <span class="eyebrow">Fique por dentro</span>
+          <h2 class="section-title">Últimas <span class="thin">notícias</span></h2>
+        </div>
+        <div class="news-home-controls">
+          <button type="button" class="news-arrow" id="newsPrev" aria-label="Notícias anteriores">←</button>
+          <button type="button" class="news-arrow" id="newsNext" aria-label="Próximas notícias">→</button>
+        </div>
+      </div>
+      <div class="news-carousel" id="newsCarousel">
+        {% for post in home_posts %}
+        <a class="news-card news-slide" href="{{ post.url }}">
+          {% if post.image %}<div class="news-card-img"><img src="{{ post.image }}" alt="{{ post.title | escape }}" loading="lazy"></div>{% endif %}
+          <span class="news-card-cat">{{ post.category }}</span>
+          <h3>{{ post.title }}</h3>
+          <p>{{ post.excerpt | default: post.content | strip_html | truncate: 120 }}</p>
+          <span class="news-card-link">Leia mais →</span>
+        </a>
+        {% endfor %}
+      </div>
+      <div style="text-align:center; margin-top:34px;">
+        <a class="btn btn-outline" href="/noticias/">Ver todas as notícias</a>
+      </div>
+    </div>
+  </section>
+  {% endif %}
 
   <!-- ================= 1. SOBRE A 8P ================= -->
   <section class="section" id="sobre">
@@ -490,6 +528,7 @@
             <h5>Contato</h5>
             <ul>
               <li><a href="#cases">Resultados</a></li>
+              <li><a href="/noticias/">Notícias</a></li>
               <li><a href="/noticias/">Notícias</a></li>
               <li><a href="#visita">Solicite uma Visita</a></li>
               <li><a href="#canais">Nossos Canais</a></li>
