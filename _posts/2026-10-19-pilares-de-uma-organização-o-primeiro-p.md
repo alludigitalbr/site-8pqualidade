@@ -2,7 +2,7 @@
 title: 'Pilares de uma organização: O Primeiro "P"'
 date: 2026-10-19T07:49:00.000-03:00
 category: ISO 9001
-featured: false
+featured: true
 excerpt: Conheça o primeiro "P" de uma organização
 ---
 Um Sistema de Gestão da Qualidade só alcança resultados consistentes quando as pessoas compreendem seu papel, participam dos processos e contribuem ativamente para a melhoria contínua. Veja como preparar sua equipe para essa evolução.
